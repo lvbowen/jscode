@@ -225,3 +225,27 @@ function where(arr, num) {
 }
 where([40, 60], 50);
 ```
+
+* 一个常见的案例就是ROT13密码，字母会移位13个位置,由'A' ↔ 'N', 'B' ↔ 'O'，以此类推,写一个ROT13函数，实现输入加密字符串，输出解密字符串
+
+```
+function rot13(str) {
+    var a=[];
+    var ste=str.split("");
+    var pattern=/[^a-zA-Z]/;
+    for (var i = 0; i < ste.length; i++) {
+        if(pattern.test(ste[i])){
+            a.push(ste[i]);
+        }else {
+            if(ste[i].charCodeAt()<65+13){
+                a.push(String.fromCharCode(ste[i].charCodeAt()+26-13));
+            }else {
+                a.push(String.fromCharCode(ste[i].charCodeAt()-13));
+            }
+        }
+    }
+    var b=a.join('');
+    return b;
+}
+rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.");
+```
