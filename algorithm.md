@@ -1,6 +1,6 @@
 # 算法片段
 
-1. 计算一个整数的阶乘
+* 计算一个整数的阶乘
 
 ```
 function factorialize(num) {
@@ -13,7 +13,7 @@ function factorialize(num) {
 factorialize(5);
 ```
 
-2. 翻转字符串
+* 翻转字符串
 
 ```
 function reverseString(str) {
@@ -23,7 +23,7 @@ function reverseString(str) {
 reverseString("hello");
 ```
 
-3. 如果给定的字符串是回文，返回true，反之，返回false，如果一个字符串忽略标点符号、大小写和空格，正着读和反着读一模一样，那么这个字符串就是palindrome(回文)
+* 如果给定的字符串是回文，返回true，反之，返回false，如果一个字符串忽略标点符号、大小写和空格，正着读和反着读一模一样，那么这个字符串就是palindrome(回文)
 
 ```
 function palindrome(str) {
@@ -36,7 +36,7 @@ function palindrome(str) {
 palindrome("race car");
 ```
 
-4. 找到提供的句子中最长的单词，并计算它的长度
+* 找到提供的句子中最长的单词，并计算它的长度
 
 ```
 function findLongestWord(str) {
@@ -53,7 +53,7 @@ function findLongestWord(str) {
 findLongestWord("The quick brown fox jumped over the lazy dog");
 ```
 
-5. 确保字符串的每个单词首字母都大写，其余部分小写
+* 确保字符串的每个单词首字母都大写，其余部分小写
 
 ```
 function titleCase(str) {
@@ -68,7 +68,7 @@ function titleCase(str) {
 titleCase("I'm a little tea pot");
 ```
 
-6. 大数组中包含了4个小数组，分别找到每个小数组中的最大值，然后把它们串联起来，形成一个新数组
+* 大数组中包含了4个小数组，分别找到每个小数组中的最大值，然后把它们串联起来，形成一个新数组
 
 ```
 function largestOfFour(arr) {
@@ -88,7 +88,7 @@ largestOfFour([
 ]);
 ```
 
-7. 检查一个字符串(str)是否以指定的字符串(target)结尾,如果是返回true;如果不是返回false
+* 检查一个字符串(str)是否以指定的字符串(target)结尾,如果是返回true;如果不是返回false
 
 ```
 function confirmEnding(str, target) {
@@ -97,7 +97,7 @@ function confirmEnding(str, target) {
 confirmEnding("Bastian", "n");
 ```
 
-8. 重复一个指定的字符串 num次，如果num是一个负数则返回一个空字符串
+* 重复一个指定的字符串 num次，如果num是一个负数则返回一个空字符串
 
 ```
 function repeat(str, num) {
@@ -115,7 +115,7 @@ function repeat(str, num) {
 repeat("abc", 3);
 ```
 
-9. 截断一个字符串！如果字符串的长度比指定的参数num长，则把多余的部分用...来表示,插入到字符串尾部的三个点号也会计入字符串的长度，如果指定的参数num小于或等于3，则添加的三个点号不会计入字符串的长度
+* 截断一个字符串！如果字符串的长度比指定的参数num长，则把多余的部分用...来表示,插入到字符串尾部的三个点号也会计入字符串的长度，如果指定的参数num小于或等于3，则添加的三个点号不会计入字符串的长度
 
 ```
 function truncate(str, num) {
@@ -134,7 +134,7 @@ function truncate(str, num) {
 truncate("A-tisket a-tasket A green and yellow basket", 11);
 ```
 
-10. 把一个数组arr按照指定的数组大小size分割成若干个数组块,例如:chunk([1,2,3,4],2)=[[1,2],[3,4]];chunk([1,2,3,4,5],2)=[[1,2],[3,4],[5]]
+* 把一个数组arr按照指定的数组大小size分割成若干个数组块,例如:chunk([1,2,3,4],2)=[[1,2],[3,4]];chunk([1,2,3,4,5],2)=[[1,2],[3,4],[5]]
 
 ```
 function chunk(arr, size) {
@@ -148,7 +148,7 @@ function chunk(arr, size) {
 chunk(["a", "b", "c", "d"], 2);
 ```
 
-11. 返回一个数组被截断n个元素后还剩余的元素
+* 返回一个数组被截断n个元素后还剩余的元素
 
 ```
 function slasher(arr, howMany) {
@@ -163,7 +163,7 @@ function slasher(arr, howMany) {
 slasher([1, 2, 3], 2);
 ```
 
-12. 如果数组第一个字符串元素包含了第二个字符串元素的所有字符，函数返回true
+* 如果数组第一个字符串元素包含了第二个字符串元素的所有字符，函数返回true
 
 ```
 function mutation(arr) {
@@ -177,7 +177,7 @@ function mutation(arr) {
 mutation(["hello", "hey"]);
 ```
 
-13. 删除数组中的所有假值
+* 删除数组中的所有假值
 
 ```
 function bouncer(arr) {
@@ -188,7 +188,7 @@ function bouncer(arr) {
 bouncer([false, null, 0, NaN, undefined, ""]);
 ```
 
-14. 实现一个摧毁(destroyer)函数，第一个参数是待摧毁的数组，其余的参数是待摧毁的值
+* 实现一个摧毁(destroyer)函数，第一个参数是待摧毁的数组，其余的参数是待摧毁的值
 
 ```
 function destroyer(arr) {
@@ -212,7 +212,7 @@ function destroyer(arr) {
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
 ```
 
-15. 先给数组排序，然后找到指定的值在数组的位置，最后返回位置对应的索引
+* 先给数组排序，然后找到指定的值在数组的位置，最后返回位置对应的索引
 
 ```
 function where(arr, num) {
