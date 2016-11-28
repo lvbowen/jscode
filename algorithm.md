@@ -249,3 +249,14 @@ function rot13(str) {
 }
 rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.");
 ```
+
+* 返回这两个数字和它们之间所有数字的和
+
+```
+function sumAll(arr) {
+    var a=Math.max.apply(null,arr);
+    var b=Math.min.apply(null,arr);
+    return (a+b)*(a-b+1)/2;
+}
+sumAll([1, 4]);
+```
