@@ -261,4 +261,54 @@
     sumAll([1, 4]);
     ```
     
+1. 比较两个数组，然后返回一个新数组，该数组的元素为两个给定数组中所有独有的数组元素，换言之，返回两个数组的差异。
 
+    ```
+    function diff(arr1, arr2) {
+        var newArr = [];
+        function a(element) {
+            return arr1.indexOf(element) == -1;
+        };
+        function b(element) {
+            return arr2.indexOf(element) == -1;
+        };
+        var arra = arr2.filter(a);
+        var arrb = arr1.filter(b);
+        newArr = arrb.concat(arra);
+        console.log(newArr);
+        return newArr;
+    }
+    diff([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+    ```
+    
+1. 将给定的数字转换成罗马数字
+
+    ```
+    function convert(num) {
+                var lookup = {
+                    M: 1000,
+                    CM: 900,
+                    D: 500,
+                    CD: 400,
+                    C: 100,
+                    XC: 90,
+                    L: 50,
+                    XL: 40,
+                    X: 10,
+                    IX: 9,
+                    V: 5,
+                    IV: 4,
+                    I: 1
+                };
+                var romanStr = "";
+                for (var i in lookup) {
+                    while (num >= lookup[i]) {
+                        romanStr += i;
+                        num -= lookup[i];
+                    }
+                }
+                return romanStr;
+            }
+            convert(36);
+    ```
+    
