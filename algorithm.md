@@ -264,21 +264,14 @@
 1. 比较两个数组，然后返回一个新数组，该数组的元素为两个给定数组中所有独有的数组元素，换言之，返回两个数组的差异。
 
     ```
-    function diff(arr1, arr2) {
-        var newArr = [];
-        function a(element) {
-            return arr1.indexOf(element) == -1;
-        };
-        function b(element) {
-            return arr2.indexOf(element) == -1;
-        };
-        var arra = arr2.filter(a);
-        var arrb = arr1.filter(b);
-        newArr = arrb.concat(arra);
-        console.log(newArr);
-        return newArr;
-    }
-    diff([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+    function diff(a,b){
+                var map={};
+                a.forEach(e=>map[e]=map[e]?map[e]+1:1);
+                b.forEach(e=>map[e]=map[e]?map[e]+1:1);
+                console.log(Object.keys(map).filter(k=>map[k]===1));
+                return Object.keys(map).filter(k=>map[k]===1);
+            }
+            diff([1, 2, 3, 5], [1, 2, 3, 4, 5,51,69]);
     ```
     
 1. 将给定的数字转换成罗马数字
